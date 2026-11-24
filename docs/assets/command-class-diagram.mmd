@@ -1,0 +1,33 @@
+classDiagram
+    class Command {
+        <<интерфейс>>
+        +execute()
+        +undo()
+    }
+
+    class AnalyzeCommand {
+        -analyzer Analyzer
+        -query AnalysisQuery
+        -_previous_query AnalysisQuery
+        -_previous_result AnalysisResult
+        +execute() AnalysisResult
+        +undo()
+    }
+
+    class CommandHistory {
+        -_undo list
+        -_redo list
+        +push(command)
+        +undo() bool
+        +redo() bool
+    }
+
+    class Analyzer {
+        +commands CommandHistory
+        +run(query) AnalysisResult
+    }
+
+    Command <|.. AnalyzeCommand
+    CommandHistory --> Command : хранит
+    Analyzer --> CommandHistory
+    AnalyzeCommand --> Analyzer

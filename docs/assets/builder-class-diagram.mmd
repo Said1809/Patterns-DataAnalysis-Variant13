@@ -1,0 +1,30 @@
+classDiagram
+    class AnalysisWindow {
+        +_current_query() AnalysisQuery
+        +_analyze()
+    }
+
+    class AnalysisQueryBuilder {
+        -_query AnalysisQuery
+        +metric(name) AnalysisQueryBuilder
+        +group_by(name) AnalysisQueryBuilder
+        +region(value) AnalysisQueryBuilder
+        +category(value) AnalysisQueryBuilder
+        +channel(value) AnalysisQueryBuilder
+        +chart(kind) AnalysisQueryBuilder
+        +build() AnalysisQuery
+    }
+
+    class AnalysisQuery {
+        +metric
+        +group_by
+        +region
+        +category
+        +channel
+        +chart_kind
+        +clone() AnalysisQuery
+        +describe() str
+    }
+
+    AnalysisWindow ..> AnalysisQueryBuilder : использует
+    AnalysisQueryBuilder ..> AnalysisQuery : создаёт

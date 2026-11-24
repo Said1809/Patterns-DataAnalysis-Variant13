@@ -1,0 +1,23 @@
+classDiagram
+    class SalesRepository {
+        <<интерфейс>>
+        +load(path) DataFrame
+        +filter(df, query) DataFrame
+    }
+
+    class FileSalesRepository {
+        +load(path) DataFrame
+        +filter(df, query) DataFrame
+    }
+
+    class Analyzer {
+        +repository SalesRepository
+    }
+
+    class LazyDatasetProxy {
+        +as_dataframe()
+    }
+
+    SalesRepository <|.. FileSalesRepository
+    Analyzer --> SalesRepository
+    FileSalesRepository ..> LazyDatasetProxy : использует

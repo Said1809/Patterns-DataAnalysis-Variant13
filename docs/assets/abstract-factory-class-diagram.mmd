@@ -1,0 +1,31 @@
+classDiagram
+    class ChartFactory {
+        <<abstract>>
+        +create_bar() Chart
+        +create_line() Chart
+        +create_pie() Chart
+        +create(kind) Chart
+    }
+
+    class MatplotlibChartFactory {
+        +create_bar() Chart
+        +create_line() Chart
+        +create_pie() Chart
+    }
+
+    class Chart {
+        <<abstract>>
+        +draw(ax, labels, values, title)
+    }
+
+    class BarChart
+    class LineChart
+    class PieChart
+
+    ChartFactory <|-- MatplotlibChartFactory
+    Chart <|-- BarChart
+    Chart <|-- LineChart
+    Chart <|-- PieChart
+    MatplotlibChartFactory ..> BarChart : создаёт
+    MatplotlibChartFactory ..> LineChart : создаёт
+    MatplotlibChartFactory ..> PieChart : создаёт

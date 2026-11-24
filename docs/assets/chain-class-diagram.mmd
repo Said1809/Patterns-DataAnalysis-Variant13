@@ -1,0 +1,19 @@
+classDiagram
+    class ValidationHandler {
+        <<абстрактный>>
+        -_next ValidationHandler
+        +set_next(handler)
+        +handle(df, query) str
+        +check(df, query) str*
+    }
+
+    class NotEmptyHandler
+    class MetricExistsHandler
+    class GroupByExistsHandler
+    class AggregationHandler
+
+    ValidationHandler <|-- NotEmptyHandler
+    ValidationHandler <|-- MetricExistsHandler
+    ValidationHandler <|-- GroupByExistsHandler
+    ValidationHandler <|-- AggregationHandler
+    ValidationHandler --> ValidationHandler : next

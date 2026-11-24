@@ -1,0 +1,19 @@
+classDiagram
+    class AnalysisApp {
+        +analyzer Analyzer
+        +window AnalysisWindow
+        +run()
+    }
+
+    class Analyzer {
+        +load(path)
+        +run(query)
+    }
+
+    class AnalysisWindow {
+        +run()
+    }
+
+    AnalysisApp --> Analyzer
+    AnalysisApp --> AnalysisWindow
+    AnalysisApp ..> AnalysisWindow : run()

@@ -1,0 +1,20 @@
+classDiagram
+    class AnalysisQuery {
+        +create_memento() QueryMemento
+        +restore_memento(memento)
+    }
+
+    class QueryMemento {
+        <<снимок>>
+        +query AnalysisQuery
+    }
+
+    class MementoCaretaker {
+        -_history list
+        +push(memento)
+        +pop() QueryMemento
+    }
+
+    AnalysisQuery ..> QueryMemento : создаёт
+    MementoCaretaker --> QueryMemento : хранит
+    QueryMemento --> AnalysisQuery : сохраняет копию

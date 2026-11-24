@@ -1,0 +1,31 @@
+classDiagram
+    class Analyzer {
+        <<Model>>
+        +df DataFrame
+        +run(query)
+        +load(path)
+    }
+
+    class AnalysisWindow {
+        <<View>>
+        +build_query()
+        +fill_table(df)
+        +draw_result(result)
+    }
+
+    class AnalysisController {
+        <<Controller>>
+        +analyze()
+        +load_path(path)
+        +undo()
+    }
+
+    class UiMediator {
+        +bind(view, controller)
+    }
+
+    AnalysisController --> Analyzer : меняет
+    AnalysisController --> UiMediator
+    AnalysisWindow --> UiMediator
+    UiMediator --> AnalysisWindow
+    UiMediator --> AnalysisController

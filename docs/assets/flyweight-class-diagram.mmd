@@ -1,0 +1,19 @@
+classDiagram
+    class StyleFlyweightFactory {
+        -_styles dict
+        +get_style(name) ChartStyle
+    }
+
+    class ChartStyle {
+        +color
+        +edgecolor
+        +alpha
+        +title_size
+    }
+
+    class Chart {
+        +style ChartStyle
+    }
+
+    StyleFlyweightFactory ..> ChartStyle : кэширует
+    Chart --> ChartStyle : использует общий стиль

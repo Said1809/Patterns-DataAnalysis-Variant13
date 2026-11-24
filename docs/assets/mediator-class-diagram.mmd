@@ -1,0 +1,28 @@
+classDiagram
+    class UiMediator {
+        <<посредник>>
+        +view AnalysisWindow
+        +controller AnalysisController
+        +bind(view, controller)
+        +request_analyze()
+        +request_undo()
+        +publish_status(text)
+        +publish_chart(result)
+    }
+
+    class AnalysisWindow {
+        <<view>>
+        +build_query()
+        +set_status(text)
+    }
+
+    class AnalysisController {
+        <<controller>>
+        +analyze()
+        +undo()
+    }
+
+    UiMediator --> AnalysisWindow
+    UiMediator --> AnalysisController
+    AnalysisWindow ..> UiMediator : вызывает
+    AnalysisController ..> UiMediator : публикует

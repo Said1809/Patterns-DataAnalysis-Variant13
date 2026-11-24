@@ -1,0 +1,20 @@
+classDiagram
+    class AnalysisPipeline {
+        <<шаблонный метод>>
+        +run(df, query) AnalysisResult
+        +before(df, query)
+        +validate(df, query) str*
+        +filter_data(df, query) DataFrame*
+        +aggregate(df, query) AnalysisResult*
+        +after(result, filtered, query)
+    }
+
+    class DefaultAnalysisPipeline {
+        +view ChartView
+        +validators ValidationHandler
+        +validate(df, query)
+        +filter_data(df, query)
+        +aggregate(df, query)
+    }
+
+    AnalysisPipeline <|-- DefaultAnalysisPipeline

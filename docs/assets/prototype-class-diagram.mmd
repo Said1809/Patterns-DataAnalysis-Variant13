@@ -1,0 +1,19 @@
+classDiagram
+    class AnalysisQuery {
+        +metric
+        +group_by
+        +region
+        +category
+        +channel
+        +chart_kind
+        +clone() AnalysisQuery
+    }
+
+    class AnalysisWindow {
+        -_prototype_query AnalysisQuery
+        +_save_prototype()
+        +_load_prototype()
+    }
+
+    AnalysisWindow --> AnalysisQuery : хранит прототип
+    AnalysisQuery ..> AnalysisQuery : clone()

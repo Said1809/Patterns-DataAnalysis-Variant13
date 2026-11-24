@@ -1,0 +1,29 @@
+classDiagram
+    class MetricNode {
+        <<интерфейс>>
+        +evaluate(df)
+        +label()
+    }
+
+    class MetricGroup {
+        +children list
+        +add(node)
+        +__iter__() MetricTreeIterator
+    }
+
+    class LeafMetric {
+        +name str
+        +column str
+    }
+
+    class MetricTreeIterator {
+        <<итератор>>
+        -_stack list
+        +__next__() MetricNode
+    }
+
+    MetricNode <|.. MetricGroup
+    MetricNode <|.. LeafMetric
+    MetricGroup --> MetricNode : children
+    MetricGroup ..> MetricTreeIterator : создаёт
+    MetricTreeIterator --> MetricNode : обходит

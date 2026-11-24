@@ -1,0 +1,26 @@
+classDiagram
+    class AnalysisSubject {
+        -_observers list
+        +attach(observer)
+        +detach(observer)
+        +notify(event)
+    }
+
+    class AnalysisObserver {
+        <<интерфейс>>
+        +on_event(event, payload)
+    }
+
+    class StatusObserver {
+        +mediator UiMediator
+        +on_event(event, payload)
+    }
+
+    class Analyzer {
+        +load(path)
+        +run_pipeline(query)
+    }
+
+    AnalysisObserver <|.. StatusObserver
+    AnalysisSubject <|-- Analyzer
+    AnalysisSubject --> AnalysisObserver : уведомляет

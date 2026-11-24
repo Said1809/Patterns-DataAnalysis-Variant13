@@ -1,0 +1,23 @@
+classDiagram
+    class AnalysisCommandService {
+        <<commands>>
+        +load_dataset(path)
+        +analyze(query)
+    }
+
+    class AnalysisQueryService {
+        <<queries>>
+        +current_result()
+        +regions() list
+        +describe_last() str
+    }
+
+    class Analyzer {
+        +command_service
+        +query_service
+        +df
+        +last_result
+    }
+
+    AnalysisCommandService --> Analyzer : пишет
+    AnalysisQueryService --> Analyzer : читает

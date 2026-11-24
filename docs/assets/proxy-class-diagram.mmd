@@ -1,0 +1,32 @@
+classDiagram
+    class Dataset {
+        <<интерфейс>>
+        +as_dataframe() DataFrame
+        +columns() list
+    }
+
+    class CsvDatasetAdapter {
+        -_df DataFrame
+        +as_dataframe() DataFrame
+    }
+
+    class JsonDatasetAdapter {
+        -_df DataFrame
+        +as_dataframe() DataFrame
+    }
+
+    class LazyDatasetProxy {
+        <<заместитель>>
+        +path Path
+        -_real Dataset
+        +load_count int
+        +is_loaded bool
+        -_ensure_loaded() Dataset
+        +as_dataframe() DataFrame
+        +columns() list
+    }
+
+    Dataset <|.. CsvDatasetAdapter
+    Dataset <|.. JsonDatasetAdapter
+    Dataset <|.. LazyDatasetProxy
+    LazyDatasetProxy --> Dataset : откладывает создание

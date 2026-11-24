@@ -1,0 +1,28 @@
+classDiagram
+    class ChartView {
+        <<abstract>>
+        +build(df, query) AnalysisResult
+        +draw(ax, result)
+    }
+
+    class BasicChartView {
+        +factory ChartFactory
+        +build(df, query)
+        +draw(ax, result)
+    }
+
+    class ChartDecorator {
+        -_wrapped ChartView
+        +build(df, query)
+        +draw(ax, result)
+    }
+
+    class StatsOverlayDecorator {
+        +build(df, query)
+        +draw(ax, result)
+    }
+
+    ChartView <|-- BasicChartView
+    ChartView <|-- ChartDecorator
+    ChartDecorator <|-- StatsOverlayDecorator
+    ChartDecorator o--> ChartView : оборачивает

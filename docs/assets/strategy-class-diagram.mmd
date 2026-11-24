@@ -1,0 +1,24 @@
+classDiagram
+    class AggregationStrategy {
+        <<интерфейс>>
+        +name() str
+        +aggregate(series) float
+    }
+
+    class SumAggregation
+    class MeanAggregation
+    class MaxAggregation
+
+    class BasicChartView {
+        +build(df, query) AnalysisResult
+    }
+
+    class AnalysisQuery {
+        +aggregation str
+    }
+
+    AggregationStrategy <|.. SumAggregation
+    AggregationStrategy <|.. MeanAggregation
+    AggregationStrategy <|.. MaxAggregation
+    BasicChartView ..> AggregationStrategy : выбирает
+    BasicChartView ..> AnalysisQuery : читает aggregation

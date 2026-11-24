@@ -1,0 +1,30 @@
+classDiagram
+    class Chart {
+        <<abstract>>
+        +renderer ChartRenderer
+        +style ChartStyle
+        +draw(ax, labels, values, title)
+    }
+
+    class ChartRenderer {
+        <<abstract>>
+        +render(ax, labels, values, style, title)
+    }
+
+    class BarRenderer
+    class LineRenderer
+    class PieRenderer
+    class BarChart
+    class LineChart
+    class PieChart
+
+    Chart o--> ChartRenderer : мост
+    Chart <|-- BarChart
+    Chart <|-- LineChart
+    Chart <|-- PieChart
+    ChartRenderer <|-- BarRenderer
+    ChartRenderer <|-- LineRenderer
+    ChartRenderer <|-- PieRenderer
+    BarChart ..> BarRenderer
+    LineChart ..> LineRenderer
+    PieChart ..> PieRenderer

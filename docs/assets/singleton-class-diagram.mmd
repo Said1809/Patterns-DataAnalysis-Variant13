@@ -1,0 +1,15 @@
+classDiagram
+    class AppConfig {
+        -_instance AppConfig
+        +window_title
+        +window_size
+        +default_metric
+        +default_group
+        +__new__() AppConfig
+    }
+
+    class AnalysisWindow {
+        +config AppConfig
+    }
+
+    AnalysisWindow --> AppConfig : использует единственный экземпляр

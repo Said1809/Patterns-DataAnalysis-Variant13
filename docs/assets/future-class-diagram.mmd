@@ -1,0 +1,23 @@
+classDiagram
+    class ChartExportService {
+        -_pool ThreadPoolExecutor
+        +export_async(analyzer, query, output) Future
+        +shutdown()
+    }
+
+    class Analyzer {
+        +export_service ChartExportService
+    }
+
+    class AnalysisController {
+        +export_chart_async(path)
+    }
+
+    class Future {
+        +result()
+        +add_done_callback()
+    }
+
+    Analyzer --> ChartExportService
+    AnalysisController ..> ChartExportService : запускает
+    ChartExportService ..> Future : возвращает

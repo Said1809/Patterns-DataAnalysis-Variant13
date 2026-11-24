@@ -1,0 +1,27 @@
+classDiagram
+    class AppState {
+        <<абстрактный>>
+        +context Analyzer
+        +name() str*
+        +on_enter()
+    }
+
+    class IdleState
+    class LoadedState
+    class AnalyzingState
+    class ReadyState
+    class ErrorState
+
+    class Analyzer {
+        -_state AppState
+        +set_state(state)
+        +state_name str
+    }
+
+    AppState <|-- IdleState
+    AppState <|-- LoadedState
+    AppState <|-- AnalyzingState
+    AppState <|-- ReadyState
+    AppState <|-- ErrorState
+    Analyzer --> AppState
+    AppState --> Analyzer : context

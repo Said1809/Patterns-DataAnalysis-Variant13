@@ -1,0 +1,274 @@
+{
+  "records": [
+    {
+      "date": "2024-01-05",
+      "region": "Север",
+      "category": "Электроника",
+      "product": "Ноутбук",
+      "units": 12,
+      "revenue": 540000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-01-08",
+      "region": "Юг",
+      "category": "Одежда",
+      "product": "Куртка",
+      "units": 30,
+      "revenue": 180000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-01-12",
+      "region": "Запад",
+      "category": "Электроника",
+      "product": "Смартфон",
+      "units": 45,
+      "revenue": 675000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-01-15",
+      "region": "Восток",
+      "category": "Продукты",
+      "product": "Кофе",
+      "units": 80,
+      "revenue": 64000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-01-18",
+      "region": "Север",
+      "category": "Одежда",
+      "product": "Кроссовки",
+      "units": 22,
+      "revenue": 154000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-01-22",
+      "region": "Юг",
+      "category": "Электроника",
+      "product": "Наушники",
+      "units": 60,
+      "revenue": 180000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-01-25",
+      "region": "Запад",
+      "category": "Продукты",
+      "product": "Чай",
+      "units": 100,
+      "revenue": 50000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-01-28",
+      "region": "Восток",
+      "category": "Электроника",
+      "product": "Планшет",
+      "units": 18,
+      "revenue": 360000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-02-02",
+      "region": "Север",
+      "category": "Продукты",
+      "product": "Шоколад",
+      "units": 90,
+      "revenue": 72000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-02-05",
+      "region": "Юг",
+      "category": "Одежда",
+      "product": "Футболка",
+      "units": 55,
+      "revenue": 110000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-02-09",
+      "region": "Запад",
+      "category": "Электроника",
+      "product": "Ноутбук",
+      "units": 8,
+      "revenue": 360000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-02-12",
+      "region": "Восток",
+      "category": "Одежда",
+      "product": "Куртка",
+      "units": 16,
+      "revenue": 96000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-02-16",
+      "region": "Север",
+      "category": "Электроника",
+      "product": "Смартфон",
+      "units": 33,
+      "revenue": 495000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-02-19",
+      "region": "Юг",
+      "category": "Продукты",
+      "product": "Кофе",
+      "units": 70,
+      "revenue": 56000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-02-23",
+      "region": "Запад",
+      "category": "Одежда",
+      "product": "Кроссовки",
+      "units": 28,
+      "revenue": 196000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-02-26",
+      "region": "Восток",
+      "category": "Электроника",
+      "product": "Наушники",
+      "units": 40,
+      "revenue": 120000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-03-01",
+      "region": "Север",
+      "category": "Продукты",
+      "product": "Чай",
+      "units": 110,
+      "revenue": 55000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-03-04",
+      "region": "Юг",
+      "category": "Электроника",
+      "product": "Планшет",
+      "units": 14,
+      "revenue": 280000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-03-08",
+      "region": "Запад",
+      "category": "Продукты",
+      "product": "Шоколад",
+      "units": 75,
+      "revenue": 60000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-03-11",
+      "region": "Восток",
+      "category": "Одежда",
+      "product": "Футболка",
+      "units": 48,
+      "revenue": 96000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-03-15",
+      "region": "Север",
+      "category": "Электроника",
+      "product": "Ноутбук",
+      "units": 10,
+      "revenue": 450000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-03-18",
+      "region": "Юг",
+      "category": "Одежда",
+      "product": "Куртка",
+      "units": 20,
+      "revenue": 120000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-03-22",
+      "region": "Запад",
+      "category": "Электроника",
+      "product": "Смартфон",
+      "units": 38,
+      "revenue": 570000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-03-25",
+      "region": "Восток",
+      "category": "Продукты",
+      "product": "Кофе",
+      "units": 65,
+      "revenue": 52000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-03-28",
+      "region": "Север",
+      "category": "Одежда",
+      "product": "Кроссовки",
+      "units": 25,
+      "revenue": 175000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-04-02",
+      "region": "Юг",
+      "category": "Электроника",
+      "product": "Наушники",
+      "units": 52,
+      "revenue": 156000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-04-05",
+      "region": "Запад",
+      "category": "Продукты",
+      "product": "Чай",
+      "units": 95,
+      "revenue": 47500,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-04-09",
+      "region": "Восток",
+      "category": "Электроника",
+      "product": "Планшет",
+      "units": 11,
+      "revenue": 220000,
+      "channel": "Онлайн"
+    },
+    {
+      "date": "2024-04-12",
+      "region": "Север",
+      "category": "Продукты",
+      "product": "Шоколад",
+      "units": 85,
+      "revenue": 68000,
+      "channel": "Офлайн"
+    },
+    {
+      "date": "2024-04-16",
+      "region": "Юг",
+      "category": "Одежда",
+      "product": "Футболка",
+      "units": 60,
+      "revenue": 120000,
+      "channel": "Онлайн"
+    }
+  ]
+}

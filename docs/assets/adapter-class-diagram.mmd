@@ -1,0 +1,26 @@
+classDiagram
+    class Dataset {
+        <<abstract>>
+        +as_dataframe() DataFrame
+        +columns() list
+    }
+
+    class CsvDatasetAdapter {
+        +path
+        +as_dataframe()
+        +columns()
+    }
+
+    class JsonDatasetAdapter {
+        +path
+        +as_dataframe()
+        +columns()
+    }
+
+    class Analyzer {
+        +load(path)
+    }
+
+    Dataset <|-- CsvDatasetAdapter
+    Dataset <|-- JsonDatasetAdapter
+    Analyzer ..> Dataset : использует

@@ -1,0 +1,25 @@
+classDiagram
+    class MetricNode {
+        <<abstract>>
+        +evaluate(df) float
+        +label() str
+    }
+
+    class LeafMetric {
+        +name
+        +column
+        +evaluate(df)
+        +label()
+    }
+
+    class MetricGroup {
+        +name
+        +children
+        +add(node)
+        +evaluate(df)
+        +walk()
+    }
+
+    MetricNode <|-- LeafMetric
+    MetricNode <|-- MetricGroup
+    MetricGroup o--> MetricNode : содержит
